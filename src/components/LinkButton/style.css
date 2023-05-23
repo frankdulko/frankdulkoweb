@@ -1,0 +1,11 @@
+.link-button {
+    justify-self: center;
+    color: var(--color-white);
+    font-weight: 700;
+    background: linear-gradient(247.24deg, #FF3864 29.59%, #623CEA 101.39%);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: center;
+    transition: 1s;
+}

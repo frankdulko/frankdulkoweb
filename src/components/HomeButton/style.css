@@ -1,0 +1,6 @@
+.homeButton {
+    color: var(--color-red);
+    font-size: 24px;
+    font-weight: 700;
+    align-self: flex-end;
+}

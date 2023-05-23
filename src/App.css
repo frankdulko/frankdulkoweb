@@ -1,38 +1,82 @@
 .App {
-  text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 100vh auto;
+  row-gap: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome{
+  text-align: center;
+  align-self: center;
+}
+
+.Hi{
+  font-size: 200px;
+  font-weight: 900;
+  color: transparent;
+  background-image: linear-gradient(247.24deg, #FF3864 29.59%, #623CEA 101.39%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .intro{
+    font-weight: 500;
+    color: var(--color-white);
+    font-size: 24px;
+    opacity: 0%;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (prefers-reduced-motion: no-preference) {
+  .name{
+    color: var(--color-blue);
+    font-size: 30px;
+    font-weight: 800;
+    opacity: 0%;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
+@keyframes appear {
   from {
-    transform: rotate(0deg);
+    opacity: 0%;
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 100%;
+  }
+}
+
+.about{
+  text-align: center;
+  margin: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-white);
+  align-self: center;
+  max-width: 500px;
+
+  color: transparent;
+  background-image: linear-gradient(247.24deg, #FF3864 29.59%, #623CEA 101.39%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media screen and (min-width: 1020px) {
+  .projectList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 50px;
+    align-items: center;
   }
 }

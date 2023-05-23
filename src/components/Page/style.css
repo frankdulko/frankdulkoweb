@@ -1,0 +1,38 @@
+img{
+    width: 80vw;
+    max-width: 500px;
+    justify-self: center;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.page{
+    display: grid;
+    grid-template-rows: 50px auto auto auto 1fr;
+    row-gap: 20px;
+    align-items: start;
+    min-height: 100vh;
+    padding: 0px 20px;
+}
+
+.project-title{
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--color-blue);
+}
+
+.project-description{
+    color: var(--color-white);
+    font-weight: 500;
+    width: 80vw;
+    max-width: 500px;
+    margin: auto;
+    white-space: pre-line;  
+    vertical-align: bottom;
+}
+
+@media screen and (min-width: 1020px) {
+    .page {
+        padding: 0px 10vw;
+    }
+}
