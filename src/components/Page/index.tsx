@@ -6,17 +6,7 @@ import LinkButton from "../LinkButton";
 import './style.css'
 import ImageEntity from "../ImageEntity";
 import TagList from "../TagList";
-
-type Project = {
-    id?: number;
-    title?: string;
-    description?: string;
-    about?: string;
-    url?: string;
-    cta?: string
-    images: string[];
-    tags: string[];
-}
+import { Project } from "../../constants";
 
 export type PageProps = {
     project: Project
@@ -26,12 +16,9 @@ const Page : React.FC<PageProps> = ({
     project
 }) => {
 
-    const hasLink = project.url ? true : false
+    const linkButton = project.url ? <LinkButton url={project.url} text={project.cta}/> : <div></div>
 
-    const linkButton = project.url ? <LinkButton url={project.url} text={project.cta}/> : undefined
-
-    const image = project.images[0] ? <ImageEntity source={project.images[0]}/> : <div></div>
-
+    const image = project.images[0] ? <ImageEntity source={project.images[0]}/> : undefined
 
     return (
         <div className="page">

@@ -1,0 +1,105 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/constants.scss";
+@import "../../styles/mixins.module.scss";
+
+
+img {
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.wrapper{
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: $light-black;
+    border-radius: 15px;
+
+    @include xs-breakpoint {
+        transition: 0.25s;
+    }
+}
+
+.wrapperProject{
+    width: 80vw;
+    max-width: 300px;
+}
+
+.wrapperFeatured{
+    width: 80vw;
+    max-width: 300px;
+    @include sm-breakpoint{
+        width: 650px;
+        max-width: none;
+    }
+}
+
+.wrapper:hover{
+    @include xs-breakpoint {
+        opacity: 50%;
+        scale: 1.05;    
+    }
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 5px;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color-blue);
+    padding: 5px;
+}
+
+.description{
+    font-size: 18px;
+    margin-left: 25%;
+    text-align: right;
+    padding: 5px;
+    color: var(--color-white);
+
+    @include xs-breakpoint{
+        font-size: 14px;
+    }
+}
+
+.more{
+    text-align: right;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px;
+    color: var(--color-red);
+}
+
+.award{
+    display: flex;
+    padding: 10px;
+}
+
+.awardIcon{
+    width: 25px;
+    flex-basis: 0;
+    padding-right: 5px;
+}
+
+.awardType{
+    color: $white;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+
+    @include text-gradient($gold-gradient);
+}
+
+.award::after{
+    content: "";
+    flex: 1;
+}

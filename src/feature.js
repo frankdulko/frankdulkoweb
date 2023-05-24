@@ -1,20 +1,23 @@
-export const feature = 
-    {
-        "id": 6,
-        "title": "Digital Logic Blocks",
-        "description": "A series of modular blocks to create an interactive physical representation of logic gates.",
-        "about": "While interning at Work & Co in the Summer of 2022, I had the opportunity to be a part of the team responsible for Audacy’s major redesign. I was able to work with a team of fantastic developers and designers, implementing design bug fixes as well as several key features, including the liking of content and including an episodes tab and episode results in search. I had the privilege to present some of these features to the wider Audacy team, and was able to witness the launch of the redesign and Work & Co’s completion of the project in August 2023.",
-        "images": [
-            "/images/logic-gate-blocks-square.jpeg",
-            ""
-        ],
-        "tags": [
-            "Fabrication",
-            "UX",
-            "3D Printing",
-            "Electronics",
-            "Interaction Design",
-            "Prototyping",
-            "Product Design"
-        ]
-    }
+export const features = [
+{
+    "id": 0,
+    "title": "Logic Gate Blocks",
+    "path": "logic-gate-blocks",
+    "description": "Logic Gate Blocks offer a physical and accessible way to more easily interact with and understand the fundamental component of computer hardware known as logic gates.",
+    "about": "Logic Gate Blocks are an interactive, physical representation of logic gates. They are a series of modular blocks that can be connected to each other in a variety of ways in order to simulate the behavior of logic gates and gain a better understanding of their functionality. The final outcome of this project can be described as Legos, but for building and simulating combinational logic circuits. Logic gates are based on boolean algebra, and are how computers make decisions and interpret information in a binary language. They receive binary inputs and produce a singular binary output based on the functionality of the gate. The four combinational logic gates created for this project are known as NOT, AND, OR, and XOR. Each of these blocks has its own distinct behavior. An input block has a switch allowing it to be turned on and off. This block can be connected to the input of a gate block and allows the participant to interact with the circuit. The output block lights up depending on the state of its input. It can be connected at the end of a circuit or at any point during the circuit where the participant may want to know the state at that particular point. These blocks are connected to each other using 3.5mm audio jack cables and splitters. Together, the input, gate, and output blocks allow the participant to create and interact with combinational logic circuits.",
+    "images": [
+        "/images/logic-gate-blocks.jpg",
+        ""
+    ],
+    "tags": [
+        "Fabrication",
+        "UX",
+        "3D Printing",
+        "Electronics",
+        "Interaction Design",
+        "Prototyping",
+        "Product Design"
+    ],
+    "award": "NYU Prototyping Fund Recipient",
+}
+]

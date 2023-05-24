@@ -1,0 +1,84 @@
+@import "../styles/breakpoints.module.scss";
+@import "../styles/mixins.module.scss";
+@import "../styles/constants.scss";
+
+
+.App {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 100vh auto;
+    row-gap: 50px;
+}
+  
+.welcome{
+    text-align: center;
+    align-self: center;
+}
+  
+.Hi{
+    font-size: 200px;
+    font-weight: 900;
+    color: transparent;
+    background-image: linear-gradient(247.24deg, #FF3864 29.59%, #623CEA 101.39%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .intro{
+      font-weight: 500;
+      color: var(--color-white);
+      font-size: 24px;
+      opacity: 0%;
+      animation-name: appear;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .name{
+      color: var(--color-blue);
+      font-size: 30px;
+      font-weight: 800;
+      opacity: 0%;
+      animation-name: appear;
+      animation-duration: 1s;
+      animation-delay: 1.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+  
+  
+  @keyframes appear {
+    from {
+      opacity: 0%;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+  
+  .about{
+    text-align: center;
+    margin: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-white);
+    align-self: center;
+    max-width: 500px;
+  
+    @include text-gradient($main-gradient);
+
+  }
+
+  .projectList{
+    @include sm-breakpoint{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 50px;
+        align-items: center;
+    }
+  }

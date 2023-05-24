@@ -2,19 +2,27 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Page from "../components/Page";
 import { projects } from "../projects";
+import { features } from "../feature";
+import { Project } from "../constants";
+
 
 const ProjectPage = ({}) => {
 
-    let {title} = useParams();
+    let {path} = useParams()
+    
+    let index = path ? projects.findIndex((project) => project.path == path) : -1
 
-    console.log(title)
+    let page = index > -1 ? <Page project={projects[index]} /> : undefined
 
-    let index = title ? Number(title) : 0;
-
-    let project = projects[index];
+    if (page == undefined){
+        index = features.findIndex((feature) => feature.path == path)
+        page = <Page project={features[index]} />;
+    }
 
     return (
-        <Page project={project}/>
+        <>
+            {page}
+        </>
     );
 };
 

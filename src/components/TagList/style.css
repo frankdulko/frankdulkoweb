@@ -3,6 +3,4 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 5px;
-    max-width: 800px;
-    justify-self: center;
 }
