@@ -1,10 +1,28 @@
 $black: rgb(25, 25, 25);
 $light-black: rgb(35,35,35);
+$gray: rgb(200, 200, 200);
 $red: #ff3864;
 $red-light: rgb(255, 104, 137);
 $blue: #623cea;
+$dark-blue: #4f2fc1;
 $white2: rgb(255, 236, 204);
 $white: rgb(255, 255, 250);
 
 $main-gradient: linear-gradient(247.24deg, #FF3864 29.59%, #623CEA 101.39%);
 $gold-gradient: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+
+$xsmall: 12px;
+$small: 16px;
+$medium: 18px;
+$large: 24px;
+$xlarge: 32px;
+$xxlarge: 48px;
+
+
+$xlight: 100;
+$light: 300;
+$med: 500;
+$heavy: 700;
+$xheavy: 900;
+
+$banner-height: 75px;

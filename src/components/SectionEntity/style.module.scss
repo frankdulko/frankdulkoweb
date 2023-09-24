@@ -1,0 +1,30 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/mixins.module.scss";
+@import "../../styles/constants.scss";
+
+.section{
+    display: flex;
+    align-items: center;
+}
+
+.sectionTitle{
+    color: $white;
+    justify-self: left;
+    width: 80vw;
+    max-width: 650px;
+    margin: auto;
+    font-size: $xlarge;
+    font-weight: $xheavy;
+    font-style: italic;
+    color: $red;
+    flex-basis: 0;
+}
+
+.bar{
+    height: 5px;
+    width: 100%;
+    flex: 1;
+    margin: 10px;
+    background: $main-gradient;
+    border-radius: 5px;
+}

@@ -6,7 +6,7 @@
 .App {
     display: grid;
     justify-items: center;
-    grid-template-rows: 100vh auto;
+    grid-template-rows: calc(100vh - $banner-height) auto;
     row-gap: 50px;
 }
   
@@ -16,12 +16,9 @@
 }
   
 .Hi{
-    font-size: 200px;
+    font-size: 100px;
     font-weight: 900;
-    color: transparent;
-    background-image: linear-gradient(247.24deg, #FF3864 29.59%, #623CEA 101.39%);
-    -webkit-background-clip: text;
-    background-clip: text;
+    line-height: 90%;
 }
   
   @media (prefers-reduced-motion: no-preference) {
@@ -74,6 +71,12 @@
 
   }
 
+  .tagLine{
+    color: $gray;
+    font-style: italic;
+    padding: 20px 0;
+  }
+
   .projectList{
     @include sm-breakpoint{
         display: grid;
@@ -81,4 +84,25 @@
         column-gap: 50px;
         align-items: center;
     }
+
+    @include lg-breakpoint{
+      grid-template-columns: auto auto auto;
+    }
+  }
+
+  .sectionTitle{
+    color: $white;
+    justify-self: left;
+    width: 80vw;
+    max-width: 650px;
+    margin: auto;
+    font-size: $xlarge;
+    font-weight: $xheavy;
+    font-style: italic;
+    color: $red;
+  }
+
+  .hero{
+    display: flex;
+    flex-direction: column;
   }

@@ -24,15 +24,15 @@ img {
 
 .wrapperProject{
     width: 80vw;
-    max-width: 300px;
+    @include xs-breakpoint{
+        max-width: 300px;
+    }
 }
 
 .wrapperFeatured{
     width: 80vw;
-    max-width: 300px;
-    @include sm-breakpoint{
-        width: 650px;
-        max-width: none;
+    @include xs-breakpoint{
+        max-width: 650px;
     }
 }
 
@@ -53,10 +53,11 @@ img {
 }
 
 .title{
-    font-size: 32px;
+    font-size: $large;
     font-weight: bold;
     color: var(--color-blue);
     padding: 5px;
+    text-transform: uppercase;
 }
 
 .description{

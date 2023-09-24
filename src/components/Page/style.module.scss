@@ -1,0 +1,59 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/mixins.module.scss";
+@import "../../styles/constants.scss";
+
+.page{
+    // display: grid;
+    // grid-template-rows: auto auto auto 1fr;
+    // row-gap: 20px;
+    // align-items: start;
+    // min-height: 100vh;
+    // padding: 0px 20px;
+    width: 80vw;
+    margin: auto;
+}
+
+.page div {
+    margin: 20px auto 20px auto;
+}
+
+.project-title{
+    @include xs-breakpoint {
+        font-size: $xxlarge;
+    }
+    font-size: $xlarge;
+    font-weight: $xheavy;
+    color: $blue;
+    text-transform: uppercase;
+}
+
+.project-sub {
+    width: 400px;
+    text-align: center;
+    font-size: $medium;
+    font-weight: $heavy;
+    color: $gray;
+    font-style: italic;
+
+
+    @include xs-breakpoint {
+        font-size: $large;
+    }
+}
+
+.project-description{
+    color: $white;
+    font-size: $small;    
+    font-weight: $med;
+    width: 80vw;
+    margin: auto;
+
+    @include xs-breakpoint {
+        max-width: 800px;
+    }
+}
+
+.link-button{
+    background-color: $blue;
+    padding: 20px;
+}

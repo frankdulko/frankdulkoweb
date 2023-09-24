@@ -1,0 +1,29 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/mixins.module.scss";
+@import "../../styles/constants.scss";
+
+
+.link-button {
+    display: block;
+    padding: 10px 30px 10px 30px;
+    margin: 20px 0 20px 0;
+    background: $blue;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--color-white);
+    font-weight: 700;
+
+    @include xs-breakpoint{
+        width: fit-content;
+        margin: 20px auto 20px auto;
+    }
+
+    transition: 1s;
+}
+
+.link-button:hover{
+    @include xs-breakpoint {
+        background-color: $dark-blue;
+        scale: 1.05;
+    }
+}

@@ -1,0 +1,68 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/mixins.module.scss";
+@import "../../styles/constants.scss";
+
+.footer{
+    display: flex;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-bg{
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    background-color: $light-black;
+    position: absolute;
+}
+
+.footer-content{
+    width: 80vw;
+}
+
+.footer-title{
+    font-size: $xsmall;
+    font-weight: $xheavy;
+    color: $white;
+}
+
+.name-footer{
+    color: var(--color-red);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.page-link{
+    color: var(--color-white);
+    font-size: $xsmall;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+.page-links{
+    display: grid;
+    padding: 10px 0px;
+}
+
+@media screen and (min-width: 700px) {
+
+    .name-footer{
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .page-link:hover{
+        opacity: 0.50;
+        transition: 250ms;
+    }
+
+
+    .page-links{
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+    }
+}

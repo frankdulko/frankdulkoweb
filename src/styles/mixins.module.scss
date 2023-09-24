@@ -4,3 +4,8 @@
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+@mixin hover() {
+    opacity: 0.5;
+    scale: 0.95;
+}
