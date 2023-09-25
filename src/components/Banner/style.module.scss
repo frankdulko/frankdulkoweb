@@ -1,5 +1,6 @@
 @import "../../styles/constants.scss";
 @import "../../styles/mixins.module.scss";
+@import "../../styles/breakpoints.module.scss";
 
 
 .banner-container{
@@ -30,5 +31,7 @@
 }
 
 .icon-list *:hover{
-    @include hover()
+    @include xs-breakpoint{
+        @include hover()
+    }
 }
