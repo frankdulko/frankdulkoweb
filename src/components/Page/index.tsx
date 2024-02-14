@@ -20,7 +20,7 @@ const Page: React.FC<PageProps> = ({ project }) => {
   );
 
   const image = project.images ? (
-    <ImageEntity source={project.images[0]} />
+    <ImageEntity source={project.images[0]} images={project.images} />
   ) : undefined;
 
   return (

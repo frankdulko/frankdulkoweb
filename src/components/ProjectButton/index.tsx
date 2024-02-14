@@ -20,7 +20,7 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({
 }) => {
   const image =
     isFeatured && project.images ? (
-      <img src={project.images[0]} alt="" />
+      <img className={styles.imageicon} src={project.images[0]} alt="" />
     ) : undefined;
 
   const award = project.award ? (
