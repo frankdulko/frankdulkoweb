@@ -1,5 +1,24 @@
 export const projects = [
   {
+    id: "6c4b1231f00c4d91add7d4a7e41b2048",
+    title: "NYC Department of Sanitation",
+    path: "dsny",
+    description:
+      "In the summer of 2023, I worked as a web application developer at the DSNY.",
+    about:
+      "During my internship with the NYC Department of Sanitation's Information Technology bureau, I served as a web application developer specializing in React and Typescript. My primary responsibility involved leading the migration of the DSNY website to Typescript, which included redesigning and optimizing various contact pages. In this capacity, I utilized React Hook Form for form management and validation, alongside developing modular input components and a form generator capable of decoding JSON objects for each form. Additionally, I contributed to resolving bugs, implementing new features, and integrating backend services through platforms such as Wordpress and TeamSite.",
+    tags: [
+      "React",
+      "Typescript",
+      "Web",
+      "Bitbucket",
+      "Git",
+      "Internship",
+      "React Hook Form",
+      "Redux",
+    ],
+  },
+  {
     id: 0,
     title: "Audacy.com",
     path: "audacy",
@@ -10,7 +29,17 @@ export const projects = [
     images: ["/images/audacy.png"],
     url: "https://audacy.com",
     cta: "Audacy.com",
-    tags: ["React", "Typescript", "Web", "GitLab", "Git"],
+    tags: ["React", "Typescript", "Web", "GitLab", "Git", "Internship"],
+  },
+  {
+    id: "7b4075fdefea4cdb848a11311a26443f",
+    title: "Bus Monitor",
+    path: "bus-monitor",
+    description:
+      "Fabricated and developed a bus monitor for my local stop using the MTA API",
+    about:
+      "I developed a bus monitoring system for my local stop by harnessing the MTA's public API. Leveraging Node.js, I established a server hosted on Glitch to efficiently retrieve and parse real-time bus arrival information specific to my stop. Subsequently, I employed Arduino to connect to the network, make API calls to the server, and illuminate an LED based on the proximity of incoming buses to my stop. This project not only showcased my proficiency in integrating disparate technologies but also demonstrated my ability to create practical solutions that enhance everyday experiences.",
+    tags: ["Arduino", "LEDs", "Node", "Javascript", "API", "Prototyping"],
   },
   {
     id: 1,
@@ -100,5 +129,24 @@ export const projects = [
       "Who’s That Dollar? is a snapchat filter in development that replaces George Washington’s face with another individual from an underrepresented group important to American history. The filter is being developed with Lens Studio, and uses image tracking to recognize a U.S. dollar bill and initiate the replace. The idea stems from recent discussion about replacing the reprasentatives of certain U.S. bills with another individual. This seemed like a good application of AR in order to achieve the same idea without much disruption.",
     images: ["/images/dollar.jpg"],
     tags: ["AR", "Snapchat", "Lens Studio", "Photoshop"],
+  },
+  {
+    id: "c765ffeea2c24a46a8ce22d010c25383",
+    title: "SSRI's (Art Toy)",
+    path: "art-toy",
+    description:
+      "Concepted and produced an art toy shedding light on mental illness.",
+    about:
+      "I embarked on an extensive exploration of art toys and toy development, delving into their creative realm to devise a unique concept. Drawing inspiration from the iconic M&M's character designs, I envisioned a novel application by incorporating these designs into representations of antidepressants. This innovative concept aimed to shed light on mental illness and its prevalence in contemporary society. Utilizing various prototyping techniques, including clay modeling, I refined my initial concept into two distinct characters. Transitioning to 3D printing as my primary medium, I navigated the intricacies of Blender to bring my characters to life digitally. After rigorous testing and refinement, I entrusted a professional facility with the production of my multicolored models, culminating in the realization of my vision through expertly crafted 3D prints.",
+    tags: ["Blender", "3D Modeling", "3D Printing", "Prototyping"],
+  },
+  {
+    id: "aed72fe0616f49a291d5824671fd65da",
+    title: "World Building in Unity",
+    path: "world-building",
+    description: "Created a 3D platforming environment using Unity",
+    about:
+      'In a "World Building in Unity" course, I crafted a 3D platforming environment to explore and master various aspects of game development. This immersive project enabled me to delve into working with 3D models, implementing animation triggers, managing object collisions, and exploring a myriad of other functionalities essential to game development. Excited by this experience, I am eager to apply these newfound skills to craft even more captivating experiences, all while actively seeking opportunities to further expand my expertise in this dynamic field.',
+    tags: ["Unity", "C#", "Mixamo"],
   },
 ];

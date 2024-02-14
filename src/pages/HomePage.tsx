@@ -13,6 +13,8 @@ import MenuButton from "../components/MenuButton";
 import SectionEntity from "../components/SectionEntity";
 import ChevronDown from "../components/ChevronDown";
 import Banner from "../components/Banner/Banner";
+import { Canvas } from "../components/Canvas/Canvas";
+import { P5Canvas } from "../components/P5Canvas/P5Canvas";
 
 const Bounce = styled.div`
   animation: 1s ${keyframes`${bounceIn}`} 1;
@@ -30,6 +32,7 @@ const HomePage = ({}) => {
   return (
     <>
       {/* <Banner /> */}
+      {/* <P5Canvas /> */}
       <div className={styles.App}>
         {/* <div className={styles.welcome}>
           <Bounce>
