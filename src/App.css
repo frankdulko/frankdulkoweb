@@ -5,29 +5,29 @@
   row-gap: 50px;
 }
 
-.app-container{
+.app-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   align-items: start;
 }
 
-.welcome{
+.welcome {
   text-align: center;
   align-self: center;
 }
 
-.Hi{
+.Hi {
   font-size: 200px;
   font-weight: 900;
   color: transparent;
-  background-image: linear-gradient(247.24deg, #FF3864 29.59%, #623CEA 101.39%);
+  background-image: linear-gradient(247.24deg, #ff3864 29.59%, #623cea 101.39%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .intro{
+  .intro {
     font-weight: 500;
     color: var(--color-white);
     font-size: 24px;
@@ -40,7 +40,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .name{
+  .name {
     color: var(--color-blue);
     font-size: 30px;
     font-weight: 800;
@@ -52,7 +52,6 @@
   }
 }
 
-
 @keyframes appear {
   from {
     opacity: 0%;
@@ -63,7 +62,7 @@
   }
 }
 
-.about{
+.about {
   text-align: center;
   margin: 30px;
   font-size: 20px;
@@ -73,13 +72,13 @@
   max-width: 500px;
 
   color: transparent;
-  background-image: linear-gradient(247.24deg, #FF3864 29.59%, #623CEA 101.39%);
+  background-image: linear-gradient(247.24deg, #ff3864 29.59%, #623cea 101.39%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 @media screen and (min-width: 1020px) {
-  .projectList{
+  .projectList {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

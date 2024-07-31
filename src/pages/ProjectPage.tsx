@@ -8,7 +8,7 @@ import { Project } from "../constants";
 
 const ProjectPage = ({}) => {
 
-    let {path} = useParams()
+    const {path} = useParams()
     
     let index = path ? projects.findIndex((project) => project.path == path) : -1
 
