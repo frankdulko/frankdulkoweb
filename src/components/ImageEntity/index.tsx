@@ -10,7 +10,7 @@ type ImageEntityProps = {
 const ImageEntity: React.FC<ImageEntityProps> = ({ source }) => {
   return (
     <div>
-      <a href={source} target="_blank" className={styles.container}>
+      <a href={source} target="_blank" className={styles.container} rel="noreferrer">
         <img src={source} alt="" className={styles.image} />
       </a>
     </div>

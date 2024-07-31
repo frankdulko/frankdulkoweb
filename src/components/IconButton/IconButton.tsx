@@ -31,7 +31,7 @@ type IconButtonProps = {
 export const IconButton = (props: IconButtonProps) => {
   const { type } = props;
   return (
-    <a href={IconButtonDetails[type].url} target="_blank">
+    <a href={IconButtonDetails[type].url} target="_blank" rel="noreferrer">
       <FontAwesomeIcon
         icon={IconButtonDetails[type].definition}
         size="2xl"

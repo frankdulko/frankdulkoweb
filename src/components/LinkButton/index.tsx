@@ -7,7 +7,7 @@ type LinkButtonProps = {
 
 const LinkButton: React.FC<LinkButtonProps> = ({ text, url }) => {
   return (
-    <a className={styles["link-button"]} target="_blank" href={url}>
+    <a className={styles["link-button"]} target="_blank" href={url} rel="noreferrer">
       {text}
     </a>
   );
