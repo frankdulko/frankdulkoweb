@@ -77,7 +77,7 @@ export const projects = [
     id: '7b4075fdefea4cdb848a11311a26443f',
     title: 'Bus Monitor',
     path: 'bus-monitor',
-    description: 'Fabricated and developed a bus monitor for my local stop using the MTA API',
+    description: 'Fabricated and developed a bus monitor for my local stop using the MTA API.',
     about:
       "I developed a bus monitoring system for my local stop by harnessing the MTA's public API. Leveraging Node.js, I established a server hosted on Glitch to efficiently retrieve and parse real-time bus arrival information specific to my stop. Subsequently, I employed Arduino to connect to the network, make API calls to the server, and illuminate an LED based on the proximity of incoming buses to my stop. This project not only showcased my proficiency in integrating disparate technologies but also demonstrated my ability to create practical solutions that enhance everyday experiences.",
     images: ['/images/bus.jpg'],
@@ -183,5 +183,29 @@ export const projects = [
       'In a "World Building in Unity" course, I crafted a 3D platforming environment to explore and master various aspects of game development. This immersive project enabled me to delve into working with 3D models, implementing animation triggers, managing object collisions, and exploring a myriad of other functionalities essential to game development. Excited by this experience, I am eager to apply these newfound skills to craft even more captivating experiences, all while actively seeking opportunities to further expand my expertise in this dynamic field.',
     images: ['/images/world-building.png'],
     tags: ['Unity', 'C#', 'Mixamo']
+  },
+  {
+    id: '8d522f2b-452f-4b9d-948c-f83489c0cfda',
+    title: 'Clue (1985) Title Sequence',
+    path: 'clue-title',
+    description: 'Created a reimagined title sequence for the movie Clue (1985).',
+    tags: ['After Effects', 'Unity', 'Motion Graphics'],
+    embedId: 'u_x_DH8Rdw4'
+  },
+  {
+    id: 'ef183de1-9582-423f-a4f4-dd8c81702517',
+    title: 'Quantum Physics - Kinetic Text',
+    path: 'quantum',
+    description: 'Created a kinetic text video explaining the basics of quantum physics.',
+    tags: ['After Effects', 'Motion Graphics', 'Kinetic Text'],
+    embedId: 'z0BsfFHQOk4'
+  },
+  {
+    id: '1090fb7b-33d6-4918-a7db-9a6812b10398',
+    title: 'Animated Logo - Dulko Digital',
+    path: 'logo',
+    description: 'Created an animated logo',
+    tags: ['After Effects', 'Motion Graphics'],
+    embedId: 'aYy7TXQqtUg'
   }
 ];
