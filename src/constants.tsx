@@ -10,4 +10,5 @@ export type Project = {
   tags: string[];
   isFeatureCard?: boolean;
   award?: string;
+  embedId?: string;
 };
