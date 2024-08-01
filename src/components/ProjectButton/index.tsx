@@ -1,27 +1,22 @@
-import { type } from "os";
-import React from "react";
-import styles from "./style.module.scss";
-import "../../constants.css";
-import image from "../../assets/No_Image_Available.jpg";
-import { Link } from "react-router-dom";
-import TagList from "../TagList";
-import { Project } from "../../constants";
-import { wrap } from "module";
+import { type } from 'os';
+import React from 'react';
+import styles from './style.module.scss';
+import '../../constants.css';
+import image from '../../assets/No_Image_Available.jpg';
+import { Link } from 'react-router-dom';
+import TagList from '../TagList';
+import { Project } from '../../constants';
+import { wrap } from 'module';
 
 type ProjectButtonProps = {
   key: number | string | undefined;
-  isFeatured: boolean;
   project: Project;
 };
 
-const ProjectButton: React.FC<ProjectButtonProps> = ({
-  project,
-  isFeatured,
-}) => {
-  const image =
-    isFeatured && project.images ? (
-      <img src={project.images[0]} alt="" />
-    ) : undefined;
+const ProjectButton: React.FC<ProjectButtonProps> = ({ project }) => {
+  const image = project.images ? (
+    <img className={styles.projectImage} src={project.images[0]} alt="" />
+  ) : undefined;
 
   const award = project.award ? (
     <div className={styles.award}>
@@ -32,11 +27,7 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({
 
   return (
     <Link to={`/${project.path}`}>
-      <div
-        className={`${styles.wrapper} ${
-          isFeatured ? styles.wrapperFeatured : styles.wrapperProject
-        }`}
-      >
+      <div className={`${styles.wrapper} ${styles.wrapperProject}`}>
         <div className={styles.info}>
           <div className={styles.title}>{project.title}</div>
           {image}

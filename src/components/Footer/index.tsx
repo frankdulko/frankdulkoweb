@@ -1,39 +1,22 @@
-import { Link } from "react-router-dom";
-import "../../constants.css";
-import { projects } from "../../projects";
-import { features } from "../../feature";
-import styles from "./style.module.scss";
+import { Link } from 'react-router-dom';
+import '../../constants.css';
+import { projects } from '../../projects';
+import { features } from '../../feature';
+import styles from './style.module.scss';
 
 const Footer = ({}) => {
   const projectsList = projects.map((project) => (
-    <Link
-      key={project.path}
-      to={`/${project.path}`}
-      className={styles["page-link"]}
-    >
-      {project.title}
-    </Link>
-  ));
-
-  const featureList = features.map((project) => (
-    <Link
-      key={project.path}
-      to={`/${project.path}`}
-      className={styles["page-link"]}
-    >
+    <Link key={project.path} to={`/${project.path}`} className={styles['page-link']}>
       {project.title}
     </Link>
   ));
 
   return (
     <div className={styles.footer}>
-      <div className={styles["footer-bg"]}></div>
-      <div className={styles["footer-content"]}>
-        <div className={styles["name-footer"]}>Frank Dulko © 2023</div>
-        <div className={styles["footer-title"]}>Featured</div>
-        <div className={styles["page-links"]}>{featureList}</div>
-        <div className={styles["footer-title"]}>More</div>
-        <div className={styles["page-links"]}>{projectsList}</div>
+      <div className={styles['footer-bg']}></div>
+      <div className={styles['footer-content']}>
+        <div className={styles['name-footer']}>Frank Dulko © 2023</div>
+        <div className={styles['page-links']}>{projectsList}</div>
       </div>
     </div>
   );
