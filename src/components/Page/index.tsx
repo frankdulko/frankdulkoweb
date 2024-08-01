@@ -24,6 +24,8 @@ const Page: React.FC<PageProps> = ({ project }) => {
 
   const motionVideo = project.embedId ? <YoutubeEmbed embedId={project.embedId} /> : undefined;
 
+  const demoVideo = project.video ? <YoutubeEmbed embedId={project.video} /> : undefined;
+
   return (
     <div className={styles.page}>
       <div className={styles['project-title']}>{project.title}</div>
@@ -34,6 +36,7 @@ const Page: React.FC<PageProps> = ({ project }) => {
         <div className={styles['project-description']}>{project.about}</div>
       ) : undefined}
       {linkButton}
+      {demoVideo}
     </div>
   );
 };

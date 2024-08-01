@@ -11,4 +11,5 @@ export type Project = {
   isFeatureCard?: boolean;
   award?: string;
   embedId?: string;
+  video?: string;
 };
