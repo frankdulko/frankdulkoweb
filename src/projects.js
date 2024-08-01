@@ -40,7 +40,8 @@ export const projects = [
       'Prototyping',
       'Product Design'
     ],
-    award: 'NYU Prototyping Fund Recipient'
+    award: 'NYU Prototyping Fund Recipient',
+    video: 'CPL40JvTkOQ'
   },
   {
     id: '6c4b1231f00c4d91add7d4a7e41b2048',
