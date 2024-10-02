@@ -1,5 +1,23 @@
 export const projects = [
   {
+    id: '5orsKGB25z*GSXNM',
+    title: 'Otea',
+    path: 'otea',
+    description:
+      'While at Otea, I performed duties of a Technical Product Manager including development, project management, and design.',
+    about:
+      'At Otea, I started as a Software Engineer with a focus on app development, but my responsibilities quickly grew to encompass project management, team delegation, and UX design. In the development phase, I streamlined the codebase by implementing reusable, modular UI components and optimizing data and state management systems. I also engineered backend algorithms for efficient data retrieval, including a multi-filter system for database queries and a geolocation-based algorithm that finds data along a user-defined route. On the UX side, I designed user flows, defined a cohesive design system, and created reusable, functional components in Figma, ensuring a consistent and intuitive user experience across the app.',
+    tags: [
+      'Flutter',
+      'Jira',
+      'Figma',
+      'Firebase',
+      'Design',
+      'App Development',
+      'Google Cloud Console'
+    ]
+  },
+  {
     id: 1,
     title: 'Hop! - Social',
     path: 'hop-social',
