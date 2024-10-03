@@ -16,6 +16,7 @@
     "@types/node": "^16.18.12",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "next": "^14.2.14",
     "p5": "^1.7.0",
     "react": "^18.2.0",
     "react-animations": "^1.0.0",
@@ -27,8 +28,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve@latest ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
