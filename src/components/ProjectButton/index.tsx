@@ -1,12 +1,9 @@
-import { type } from 'os';
 import React from 'react';
 import styles from './style.module.scss';
 import '../../constants.css';
-import image from '../../assets/No_Image_Available.jpg';
 import { Link } from 'react-router-dom';
 import TagList from '../TagList';
 import { Project } from '../../constants';
-import { wrap } from 'module';
 
 type ProjectButtonProps = {
   key: number | string | undefined;
