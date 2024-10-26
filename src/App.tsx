@@ -7,18 +7,7 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="app-container">
-        <Banner />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/:path" element={<ProjectPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
+  return <div>Hello</div>;
 }
 
 export default App;

@@ -1,18 +1,27 @@
 import React from 'react';
 import styles from './style.module.scss';
 import '../../constants.css';
-import { Link } from 'react-router-dom';
 import TagList from '../TagList';
 import { Project } from '../../constants';
+import Link from 'next/link';
+import { client } from '@/sanity/client';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import imageUrlBuilder from '@sanity/image-url';
 
 type ProjectButtonProps = {
   key: number | string | undefined;
   project: Project;
 };
 
-const ProjectButton: React.FC<ProjectButtonProps> = ({ project }) => {
-  const image = project.images ? (
-    <img className={styles.projectImage} src={project.images[0]} alt="" />
+const { projectId, dataset } = client.config();
+const urlFor = (source: SanityImageSource) =>
+  projectId && dataset ? imageUrlBuilder({ projectId, dataset }).image(source) : null;
+
+const ProjectButton = ({ project }: { project: any }) => {
+  const postImageUrl = project.image ? urlFor(project.image)?.url() : null;
+
+  const image = postImageUrl ? (
+    <img className={styles.projectImage} src={postImageUrl} alt="" />
   ) : undefined;
 
   const award = project.award ? (
@@ -23,7 +32,7 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({ project }) => {
   ) : undefined;
 
   return (
-    <Link to={`/${project.path}`}>
+    <Link href={project.slug.current}>
       <div className={`${styles.wrapper} ${styles.wrapperProject}`}>
         <div className={styles.info}>
           <div className={styles.title}>{project.title}</div>
