@@ -1,5 +1,4 @@
 import ProjectButton from '../components/ProjectButton';
-import { projects } from '../projects';
 import styles from './style.module.scss';
 import '../constants.css';
 import LinkButton from '../components/LinkButton';

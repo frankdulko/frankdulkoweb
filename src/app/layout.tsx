@@ -6,6 +6,7 @@ import Banner from '@/components/Banner/Banner';
 import { client } from '@/sanity/client';
 import { SanityDocument } from 'next-sanity';
 import Footer from '@/components/Footer';
+import ClientAppWrapper from '@/components/ClientWrapper';
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ const PROJECTS_QUERY = `*[
 const options = { next: { revalidate: 30 } };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const posts = await client.fetch<SanityDocument[]>(PROJECTS_QUERY, {}, options);
+  const posts = await client.fetch<SanityDocument[]>(PROJECTS_QUERY);
 
   return (
     <html lang="en">
