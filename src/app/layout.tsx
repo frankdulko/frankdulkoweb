@@ -6,7 +6,6 @@ import Banner from '@/components/Banner/Banner';
 import { client } from '@/sanity/client';
 import { SanityDocument } from 'next-sanity';
 import Footer from '@/components/Footer';
-import ClientAppWrapper from '@/components/ClientWrapper';
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
