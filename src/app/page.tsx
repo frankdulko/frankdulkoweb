@@ -1,0 +1,17 @@
+import Link from 'next/link';
+import { type SanityDocument } from 'next-sanity';
+
+import { client } from '@/sanity/client';
+import HomePage from '@/app-pages/HomePage';
+import React from 'react';
+
+const PROJECTS_QUERY = `*[
+  _type == "project"
+  && defined(slug.current)
+]|order(publishedAt asc)[0...12]`;
+
+export default async function IndexPage() {
+  const posts = await client.fetch<SanityDocument[]>(PROJECTS_QUERY);
+
+  return <HomePage projects={posts} />;
+}

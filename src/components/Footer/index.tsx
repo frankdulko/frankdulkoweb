@@ -1,12 +1,10 @@
-import { Link } from 'react-router-dom';
 import '../../constants.css';
-import { projects } from '../../projects';
-import { features } from '../../feature';
 import styles from './style.module.scss';
+import Link from 'next/link';
 
-const Footer = ({}) => {
-  const projectsList = projects.map((project) => (
-    <Link key={project.path} to={`/${project.path}`} className={styles['page-link']}>
+const Footer = ({ projects }: { projects: any }) => {
+  const projectsList = projects?.map((project: any) => (
+    <Link key={project._id} href={project.slug.current} className={styles['page-link']}>
       {project.title}
     </Link>
   ));

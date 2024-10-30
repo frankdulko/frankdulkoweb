@@ -1,27 +1,27 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export enum IconType {
-  linkedin = "linkedin",
-  github = "github",
-  conatct = "contact",
+  linkedin = 'linkedin',
+  github = 'github',
+  conatct = 'contact'
 }
 
 const IconButtonDetails = {
   linkedin: {
     definition: faLinkedin,
-    url: "https://www.linkedin.com/in/frankdulko",
+    url: 'https://www.linkedin.com/in/frankdulko'
   },
   github: {
     definition: faSquareGithub,
-    url: "https://github.com/frankdulko",
+    url: 'https://github.com/frankdulko'
   },
   contact: {
     definition: faEnvelope,
-    url: "mailto:frankdulko@gmail.com",
-  },
+    url: 'mailto:frankdulko@gmail.com'
+  }
 };
 
 type IconButtonProps = {
@@ -35,7 +35,7 @@ export const IconButton = (props: IconButtonProps) => {
       <FontAwesomeIcon
         icon={IconButtonDetails[type].definition}
         size="2xl"
-        style={{ color: "white" }}
+        style={{ color: 'white' }}
       />
     </a>
   );

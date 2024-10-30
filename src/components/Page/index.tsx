@@ -1,11 +1,7 @@
-import { type } from 'os';
 import React from 'react';
-import Footer from '../Footer';
-import HomeButton from '../HomeButton';
 import LinkButton from '../LinkButton';
 import styles from './style.module.scss';
 import ImageEntity from '../ImageEntity';
-import TagList from '../TagList';
 import { Project } from '../../constants';
 import YoutubeEmbed from '../YoutubeEmbed';
 

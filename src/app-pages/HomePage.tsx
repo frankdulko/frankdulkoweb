@@ -1,17 +1,10 @@
-import { bounceIn } from 'react-animations';
-import styled, { keyframes } from 'styled-components';
 import ProjectButton from '../components/ProjectButton';
-import { projects } from '../projects';
 import styles from './style.module.scss';
 import '../constants.css';
 import LinkButton from '../components/LinkButton';
 
-const Bounce = styled.div`
-  animation: 1s ${keyframes`${bounceIn}`} 1;
-`;
-
-const HomePage = ({}) => {
-  const projectsList = projects.map((project) => (
+const HomePage = ({ projects }: { projects: any }) => {
+  const projectsList = projects.map((project: any) => (
     <ProjectButton project={project} key={project.title} />
   ));
 

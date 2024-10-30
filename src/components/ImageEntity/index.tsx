@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import styles from "./style.module.css";
-import "../../constants.css";
+import styles from './style.module.css';
+import '../../constants.css';
 
 type ImageEntityProps = {
   source: string;
