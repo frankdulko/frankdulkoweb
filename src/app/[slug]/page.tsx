@@ -1,10 +1,6 @@
-import { PortableText, type SanityDocument } from 'next-sanity';
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import { type SanityDocument } from 'next-sanity';
 import { client } from '@/sanity/client';
-import Link from 'next/link';
-import ProjectPage from '@/app-pages/ProjectPage';
 import Page from '@/components/Page';
-import Banner from '@/components/Banner/Banner';
 import React from 'react';
 import { Project } from '@/sanity/sanity.types';
 
