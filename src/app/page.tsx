@@ -10,8 +10,10 @@ const PROJECTS_QUERY = `*[
   && defined(slug.current)
 ]|order(publishedAt asc)[0...12]`;
 
+const options = { next: { revalidate: 30 } };
+
 export default async function IndexPage() {
-  const posts = await client.fetch<SanityDocument[]>(PROJECTS_QUERY);
+  const posts = await client.fetch<SanityDocument[]>(PROJECTS_QUERY, {}, options);
 
   return <HomePage projects={posts} />;
 }

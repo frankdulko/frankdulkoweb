@@ -14,7 +14,7 @@ const options = { next: { revalidate: 30 } };
 
 export async function generateStaticParams() {
   const SLUG_QUERY = `*[_type == "project"]{slug}`;
-  const slugs = await client.fetch<SanityDocument>(SLUG_QUERY, {});
+  const slugs = await client.fetch<SanityDocument>(SLUG_QUERY);
 
   return slugs.map((slug: { slug: any }) => ({
     slug: slug.slug.current
