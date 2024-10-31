@@ -2,8 +2,9 @@ import React from 'react';
 import LinkButton from '../LinkButton';
 import styles from './style.module.scss';
 import ImageEntity from '../ImageEntity';
-import { Project } from '../../constants';
 import YoutubeEmbed from '../YoutubeEmbed';
+import { Project } from '@/sanity/sanity.types';
+import { urlFor } from '@/sanity/functions';
 
 export type PageProps = {
   project: Project;
@@ -16,23 +17,30 @@ const Page: React.FC<PageProps> = ({ project }) => {
     <div></div>
   );
 
-  const image = project.images ? <ImageEntity source={project.images[0]} /> : undefined;
+  const projectImageUrl = project.image ? urlFor(project.image)?.url() : null;
 
-  const motionVideo = project.embedId ? <YoutubeEmbed embedId={project.embedId} /> : undefined;
+  const image = projectImageUrl ? <ImageEntity source={projectImageUrl} /> : undefined;
 
-  const demoVideo = project.video ? <YoutubeEmbed embedId={project.video} /> : undefined;
+  const video = project.videoId ? <YoutubeEmbed embedId={project.videoId} /> : undefined;
+
+  const body = project.body
+    ? project.body.map((block) =>
+        block.children ? (
+          <div key={block._key} className={styles['project-description']}>
+            {block.children[0].text}
+          </div>
+        ) : undefined
+      )
+    : undefined;
 
   return (
     <div className={styles.page}>
       <div className={styles['project-title']}>{project.title}</div>
       <div className={styles['project-sub']}>{project.description}</div>
-      {motionVideo}
       {image}
-      {project.about ? (
-        <div className={styles['project-description']}>{project.about}</div>
-      ) : undefined}
+      {body}
       {linkButton}
-      {demoVideo}
+      {video}
     </div>
   );
 };

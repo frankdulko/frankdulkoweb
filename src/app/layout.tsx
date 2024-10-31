@@ -20,7 +20,7 @@ const PROJECTS_QUERY = `*[
 const options = { next: { revalidate: 30 } };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const posts = await client.fetch<SanityDocument[]>(PROJECTS_QUERY);
+  const posts = await client.fetch<SanityDocument[]>(PROJECTS_QUERY, {}, options);
 
   return (
     <html lang="en">
