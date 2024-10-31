@@ -8,7 +8,7 @@ import React from 'react';
 const PROJECTS_QUERY = `*[
   _type == "project"
   && defined(slug.current)
-]|order(publishedAt asc)[0...12]`;
+]|order(publishedAt asc)`;
 
 const options = { next: { revalidate: 30 } };
 
