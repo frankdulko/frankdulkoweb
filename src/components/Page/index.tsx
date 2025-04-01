@@ -33,10 +33,21 @@ const Page: React.FC<PageProps> = ({ project }) => {
       )
     : undefined;
 
+  const renderImages = () => {
+    return (
+      project.images &&
+      project.images.map((image) => {
+        const imageUrl = urlFor(image)?.url();
+        return imageUrl && <ImageEntity source={imageUrl} />;
+      })
+    );
+  };
+
   return (
     <div className={styles.page}>
       <div className={styles['project-title']}>{project.title}</div>
       <div className={styles['project-sub']}>{project.description}</div>
+      {renderImages()}
       {image}
       {body}
       {linkButton}
