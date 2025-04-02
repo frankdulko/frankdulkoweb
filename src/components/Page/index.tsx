@@ -5,6 +5,7 @@ import ImageEntity from '../ImageEntity';
 import YoutubeEmbed from '../YoutubeEmbed';
 import { Project } from '@/sanity/sanity.types';
 import { urlFor } from '@/sanity/functions';
+import ImageCarousel from '../ImageCarousel';
 
 export type PageProps = {
   project: Project;
@@ -47,7 +48,7 @@ const Page: React.FC<PageProps> = ({ project }) => {
     <div className={styles.page}>
       <div className={styles['project-title']}>{project.title}</div>
       <div className={styles['project-sub']}>{project.description}</div>
-      {renderImages()}
+      {(project.images?.length ?? 0) > 0 && <ImageCarousel images={{ images: project.images }} />}
       {image}
       {body}
       {linkButton}
