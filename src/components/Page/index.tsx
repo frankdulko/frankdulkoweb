@@ -49,7 +49,6 @@ const Page: React.FC<PageProps> = ({ project }) => {
       <div className={styles['project-title']}>{project.title}</div>
       <div className={styles['project-sub']}>{project.description}</div>
       {(project.images?.length ?? 0) > 0 && <ImageCarousel images={{ images: project.images }} />}
-      {image}
       {body}
       {linkButton}
       {video}
