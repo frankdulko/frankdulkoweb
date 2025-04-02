@@ -6,7 +6,7 @@
   overflow: hidden;
   background-color: rgb(35,35,35);
   border-radius: 16px;
-  padding: 8px;
+  padding: 16px;
 }
 .embla__container {
   display: flex;
@@ -24,6 +24,8 @@
 .image-item{
   max-height: 400px;
   max-width: 100%;
+  border-radius: 8px;
+  vertical-align: bottom;
 }
 .embla__controls {
   margin-top: 16px;
