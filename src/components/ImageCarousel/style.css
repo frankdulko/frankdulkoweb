@@ -1,5 +1,4 @@
 .embla {
-    overflow: hidden;
   }
 
 .embla__viewport {
@@ -10,6 +9,7 @@
 }
 .embla__container {
   display: flex;
+  gap: 16px;
 }
 .embla__slide {
   display: flex;
