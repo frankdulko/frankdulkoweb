@@ -17,8 +17,9 @@
   
 .Hi{
     font-size: 100px;
-    font-weight: 900;
+    font-weight: 500;
     line-height: 90%;
+    font-style: italic;
 }
   
   @media (prefers-reduced-motion: no-preference) {
@@ -65,7 +66,7 @@
     font-weight: 600;
     color: var(--color-white);
     align-self: center;
-    max-width: 500px;
+    max-width: 700px;
   
     @include text-gradient($main-gradient);
 
@@ -85,7 +86,7 @@
         align-items: center;
     }
 
-    @include lg-breakpoint{
+    @include md-breakpoint{
       grid-template-columns: auto auto auto;
     }
   }

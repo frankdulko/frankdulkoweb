@@ -11,13 +11,16 @@ const HomePage = ({ projects }: { projects: any }) => {
   return (
     <div className={styles.App}>
       <div className={styles.about}>
-        <span className={styles.Hi}>HI!</span> I am a full stack developer and UX engineer based in
-        Brooklyn, NY. I studied computer engineering at Stony Brook University, and recently
-        graduated with a Master’s degree from New York University’s Interactive Telecommunications
-        Program (ITP). With a passion for working at the intersection of art and technology, I
-        strive to collaborate with others to deliver engaging user experiences. I invite you to take
-        a look at some of my work below, and welcome you to connect with me about any questions or
-        opportunities.
+        <div className={styles.Hi}>Hello</div>
+        I’m a full-stack developer and design technologist with a passion for bringing art and
+        technology together to create engaging user experiences. After earning my Bachelor’s degree
+        in Computer Engineering at Stony Brook University, I went on to complete a Master’s at NYU’s
+        Interactive Telecommunications Program, where I honed my skills in rapid prototyping,
+        creative coding, and user-centered design. Along the way, I’ve led end-to-end app
+        development, built intuitive interfaces, and optimized performance for a range of startups
+        and organizations. I invite you to explore my work below and get in touch with any questions
+        or opportunities. I’m always excited to collaborate and keep pushing what’s possible with
+        digital experiences.
         <div style={{ height: 64 }}></div>
         <LinkButton url={'mailto:frankdulko@gmail.com'} text={"Let's create something together!"} />
       </div>
