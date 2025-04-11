@@ -1,8 +1,15 @@
+$xxsBreakpoint: 425px;
 $xsBreakpoint: 576px;
 $smBreakpoint: 768px;
 $mdBreakpoint: 1024px;
 $lgBreakpoint: 1290px;
 $xlBreakpoint: 1440px;
+
+@mixin phone {
+    @media only screen and (max-width: $xxsBreakpoint) and (max-height: 740px){
+    @content
+    }
+};
 
 @mixin xs-breakpoint {
     @media only screen and (min-width: $xsBreakpoint){

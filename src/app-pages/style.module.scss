@@ -8,6 +8,10 @@
     justify-items: center;
     grid-template-rows: calc(100vh - $banner-height) auto;
     row-gap: 50px;
+
+    @include phone{
+      // grid-template-rows: auto auto;
+  }
 }
   
 .welcome{
@@ -69,6 +73,10 @@
     max-width: 700px;
   
     @include text-gradient($main-gradient);
+
+    @include phone{
+      font-size: 16px;
+    }
 
   }
 
